@@ -1,5 +1,5 @@
-import { supabase } from "../config/supabase";
-import { contactSchema } from "../models/contact.model";
+import { supabase } from "../config/supabase.js";
+import { contactSchema } from "../models/contact.model.js";
 
 export const getAllContacts = async (id) => {
     const adminId = id;
