@@ -1,11 +1,7 @@
 import { supabase } from "../config/supabase.js";
 import { contactSchema } from "../models/contact.model.js";
 
-export const getAllContacts = async (id) => {
-    const adminId = id;
-
-    if (!adminId) throw new Error("Admin ID is required");
-
+export const getAllContacts = async () => {
     const { data, error } = await supabase
         .from("contact_form")
         .select("*")
