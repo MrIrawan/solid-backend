@@ -3,5 +3,5 @@ import { getAllContactsController, createContactController } from "../controller
 
 export const contactRouter = Router();
 
-contactRouter.get("/admin/all", getAllContactsController);
-contactRouter.post("/create", createContactController);
+contactRouter.get("/contacts", getAllContactsController);
+contactRouter.post("/create/contact", createContactController);
