@@ -16,15 +16,15 @@ export const createContactController = async (req, res, next) => {
     const contactData = req.body;
 
     if (!contactData) return res.status(400).json({
-        status: "Failed To Create Contact",
+        status: "Failed",
         message: "Contact data is required"
     });
 
     try {
         const result = await createContact(contactData);
         res.status(200).json({
-            status: "Successfully Created Contact",
-            data: result
+            status: "Successfully",
+            message: "Your Message Successfully send!",
         })
     } catch (error) {
         next(error);
